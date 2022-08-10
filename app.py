@@ -23,7 +23,7 @@ def predict():
     
     prediction = model.predict(X)
 
-    return render_template('index.html', prediction_text='{}'.format(prediction))
+    return render_template('index.html', prediction_text='{}'.format(str(prediction[0])))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
